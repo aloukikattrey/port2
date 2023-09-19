@@ -16,14 +16,6 @@
         display: block;
         cursor: pointer;
     }
-    .navbar.active{
-        background-color: #313131;
-    }
-
-    .cv-button p {
-        display: block;
-    }
-
     .header {
         padding-left: 16px;
         padding-right: 16px;
@@ -40,8 +32,26 @@
         transition-delay: .25s;
 
     }
+    /* .btn-box{
+        justify-content: space-around;
+        display: flex;
+        background: black;
+        width: 251px;
+        padding: 29px 0px;
+        border-radius: 13px;
+        align-items: center;
+        margin: 0;
+        height: 4px;
+    } */
 
+    .mg-rt {
+        margin-left: 33px;
+    }
+    .mg-lt {
+        margin-left: 33px;
+    }
     .navbar.active {
+        background-color: #313131;
         left: 0;
         transition-delay: 0s;
         padding-bottom: 23px;
@@ -52,7 +62,6 @@
         display: block;
         font-size: 2rem;
         margin-bottom: 8px;
-
     }
 
     .right-abtme {
@@ -174,8 +183,6 @@
     .skill-btn {
         padding: 5px 5px;
         font-size: 15px;
-
-
     }
 
     .edu {
@@ -190,10 +197,6 @@
         display: block;
         padding: 1rem 6% 2rem;
 
-    }
-
-    .forth-page * {
-        font-size: 20px;
     }
 
     .contact-sec {
@@ -217,18 +220,34 @@
     #madew {
         margin-bottom: 10px;
     }
-
+    .cross{
+        display: flex;
+    }
     .adress p {
         font-size: 20px;
         margin-bottom: 5px;
     }
 
-    .skboss {
+    /* .skboss {
+        z-index: 99;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        display: block;
+    } */
+    .skill-info{
+        z-index: 99;
+        position: fixed;
+        bottom: 0;
+        left: 0;
         display: none;
+        height: 60vh;
     }
 
     .skill-flex {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
 }
