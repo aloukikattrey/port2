@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Poppins:wght@300;600&family=Roboto:wght@100&family=Varela+Round&family=Work+Sans:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@200&family=Varela+Round&display=swap');
 
 * {
     margin: 0;
@@ -113,11 +114,12 @@ body {
     color: var(--main-color);
     display: none;
 }
-/* .navbar{
+
+/* .navbar {
     display: flex;
 } */
 
-.navbar a {
+.nav-mgn {
     color: var(--text-color);
     font-size: 1.4rem;
     margin-left: 4rem;
@@ -125,28 +127,33 @@ body {
 }
 
 .cv-button {
-    background-color: rgba(255, 255, 255, 0.155);
+    background-color: transparent;
     border: 1.4px solid white;
     font-size: 14px;
-    display: inline-block;
+    /* display: inline-block; */
     width: 37px;
     height: 33px;
     color: white;
-    padding: 5px 8px;
+    padding: 5px 7px 5px 10px;
     text-align: center;
     text-decoration: none;
     border-radius: 8px;
     transition-duration: 0.2s;
     cursor: pointer;
-    margin-left: 3px;
     transition: 0.3s ease;
 }
 
 .cv-button:hover {
     color: var(--main-color);
     border: 1.4px solid var(--main-color);
+}
 
+.mg-lt {
+    margin-left: 30px;
+}
 
+.mg-rt {
+    margin-left: 5px;
 }
 
 .cv-button p {
@@ -164,6 +171,7 @@ body {
     height: 120vh;
     justify-content: center;
     /* background-image: url('backimg.jpg'); */
+    background-image: linear-gradient(rgb(18, 18, 18), rgb(39, 39, 39), rgb(39, 39, 39), rgb(18, 18, 18));
     background-size: cover;
     gap: 100px;
     min-height: 100vh;
@@ -206,18 +214,42 @@ body {
 }
 
 .socials a:hover {
-    /* background-color: rgba(239, 108, 0, 0.174); */
-    /* margin-left: 10px; */
-
     color: white;
 }
 
+.img-over {
+    position: relative;
+}
+
 #myphoto {
+    /* position: absolute;
+    width: 200px;
+    height: 200px;
+    z-index: 3;
+    filter: saturate(250%); */
+
     width: 200px;
     height: 200px;
     border: .2rem solid var(--main-color);
     border-radius: 50%;
 }
+
+/* #myphoto-orng {
+    z-index: 2;
+    top: -12px;
+    left: -29px;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+}
+#myphoto-dot {
+    z-index: 1;
+    position: absolute;
+    top: 12px;
+    left: 29px;
+    width: 200px;
+    height: 200px;
+} */
 
 
 
@@ -248,12 +280,12 @@ body {
     background-color: #7b8492;
     padding: 0;
     margin: 0;
-    height: max-content;
+    height: 581px;
 }
 
 .left-abtme {
     flex: 1.3;
-    position: absolute;
+    /* position: absolute; */
 }
 
 .left-abtme :nth-child(1) {
@@ -274,13 +306,16 @@ body {
 
 .right-abtme {
     flex: 0.7;
-    /* display: flex; */
+    display: flex;
     background: linear-gradient(45deg, #F17C58, #E94584, #24AADB, #27DBB1);
     background-size: 600% 100%;
     animation: gradient 16s linear infinite;
     animation-direction: alternate;
-    border-left: 1px solid black;    
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid black;
 }
+
 #profileme {
 
     height: 167px;
@@ -333,11 +368,13 @@ body {
 .edu {
     background-image: linear-gradient(#313866, #504099);
     width: 400px;
-    height: 480px;
+    min-height: 480px;
+    max-height: max-content;
     padding-top: 30px;
     border-radius: 10px;
-    box-shadow: 0px 0px 5px 5px #05050536;
+    /* box-shadow: 0px 0px 5px 5px #05050536; */
     transition: 0.3s ease;
+    border: 2px solid #5867b5;
 }
 
 
@@ -375,6 +412,10 @@ body {
     height: max-content;
 }
 
+.sk-gold {
+    color: wheat;
+}
+
 .skill-flex {
     margin-top: 23px;
     display: flex;
@@ -383,36 +424,71 @@ body {
 }
 
 .skill-btn {
-    color: white;
+    color: rgb(255, 246, 228);
     cursor: default;
-    background-color: transparent;
+    /* background-image: linear-gradient(to right, #e8e8e8, #ffffff); */
+    background-image: linear-gradient(to right, #323232, #2e2e2e);
+
     width: 478px;
     padding: 13px 15px;
     margin-right: 3px;
-
+    margin-top: 8px;
+    border: 1px solid rgba(255, 255, 255, 0);
     text-decoration: none;
     font-size: 17px;
     transition-duration: 0.2s;
-    border-top: 1px solid rgb(116, 116, 116);
-
-
+    border-radius: 4px;
+    transition: 0.3s ease;
+    /* border: 1.5px solid rgb(195 144 49); */
 }
 
 .skill-btn:hover {
-    background-color: rgb(113, 113, 113);
+    color: wheat;
+    /* border: 1.5px solid rgba(195, 144, 49, 0); */
+
+    background-image: linear-gradient(to right, #222222, #17171700);
 }
 
 .skill-info {
-    display: block;
-    background-color: rgb(207 133 110);
-    border: 2px solid black;
+    display: none;
+    background-color: wheat;
+    /* border: 2px solid black; */
     width: 700px;
-    height: 400px;
+    min-height: 400px;
+    max-height: max-content;
     border-radius: 12px;
 }
-.skill-info p{
+
+.cross {
+    display: none;
+    margin-top: 11px;
+    margin-right: 11px;
+    background-color: rgb(185, 167, 133);
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+}
+
+.cross i {
+    color: rgb(61, 61, 61);
+    font-family: 'Handjet', cursive;
+    font-size: 34px;
+}
+
+.cross-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill-info p {
+
+    color: black;
     margin-left: 23px;
 }
+
 #hdng-skill {
     display: none;
     font-size: 46px;
@@ -427,12 +503,25 @@ body {
 }
 
 #skl-skill {
+    font-weight: 800;
     font-size: 26px;
+    margin-top: 10px;
 
+}
+
+.prct-all {
+    display: flex;
+    align-items: center;
 }
 
 #prct-skill {
     font-size: 40px;
+}
+
+#prct-sign {
+    margin: 0;
+    font-size: 33px;
+    margin-left: 8px;
 }
 
 #skill-photo {
@@ -626,15 +715,14 @@ input[type=email] {
 
 .reveal2 {
     position: relative;
-    transform: translateX(100px);
+    transform: translateY(150px);
     opacity: 0;
-    /* transition: all 3s ease; */
-    transition: all 2000ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 1s ease;
 
 }
 
 .reveal2.active {
-    transform: translateX(0px);
+    transform: translateY(0px);
     opacity: 1;
 }
 
@@ -648,4 +736,18 @@ input[type=email] {
 .reveal3.active {
     transform: translateY(0px);
     opacity: 1;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.8);
 }
