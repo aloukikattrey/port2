@@ -43,7 +43,6 @@ window.addEventListener('scroll', reveal2);
 function reveal2() {
     var reveal2 = document.querySelectorAll('.left-abtme');
 
-
     for (var i = 0; i < reveal2.length; i++) {
 
         var windowheight = window.innerHeight;
@@ -109,11 +108,11 @@ $(".skill-btn").mouseover(function () {
     // $(".skill-info").css("display", "block");
     $(".skill-info").fadeIn(300)
 
-    
 
-    let ide= $(this).attr('id')
 
-    switch(ide){
+    let ide = $(this).attr('id')
+
+    switch (ide) {
         case 'html':
             $("#hdng-skill").text('HTML')
             $("#prct-skill").text('90')
@@ -167,10 +166,37 @@ $(".skill-btn").mouseover(function () {
 
 });
 $(".skill-btn").mouseout(function () {
+    $(".skill-info").css("display", "none");
+
+    //trash
     // $('#hdng-skill').show(500);
     // $('#hdng-skill').delay(9000).fadeOut();
     // $('#cnt-skill').delay(9000).fadeOut();
-    $(".skill-info").css("display", "none");
     // $(".skill-info").delay(900).fadeOut();
 
 });
+
+$('.cross').click(function () {
+    $(".skill-info").css("display", "none");
+    $(".modal").css("display", "none");
+})
+
+// listing media query for modal
+
+function myFunction(x) {
+    if (x.matches) {
+        $('.skill-btn').click(function () {
+            $(".modal").css("display", "block");
+        })
+    } else {
+        // $(".modal").css("display", "none");
+    }
+}
+var modal = document.getElementById(".modal");
+window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+var x = window.matchMedia("(max-width: 582px)")
+x.addEventListener('change', myFunction(x));
