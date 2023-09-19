@@ -20,20 +20,25 @@
         <div class="bx bx-menu" id="ham-menu"></div>
 
         <nav class="navbar">
-            <a href="#onep" class="active">Home</a>
-            <a href="#aboutmep">About Me</a>
-            <a href="#twop">Education</a>
-            <a href="#threep">Skills</a>
-            <a href="#fourp">Contact Me</a>
+            <a href="#onep" class="active nav-mgn">Home</a>
+            <a href="#aboutmep" class="nav-mgn">About Me</a>
+            <a href="#twop" class="nav-mgn">Education</a>
+            <a href="#threep" class="nav-mgn">Skills</a>
+            <a href="#fourp" class="nav-mgn">Contact Me</a>
 
-            <a title="Download CV"
-                href="https://drive.google.com/uc?export=download&id=1v1qjGeqWottQP30IBKHYQOUItX2s2SN8"
-                class="cv-button" target="_blank"><i class='bx bx-download'></i>
-                <p>Download Resume</p>
-            </a>
-            <a title="Send Mail" class="cv-button"><i class='bx bx-mail-send'></i>
-                <p>Send Mail</p>
-            </a>
+            <!-- <div class="btn-box"> -->
+
+                <a title="Download CV"
+                    href="https://drive.google.com/uc?export=download&id=1v1qjGeqWottQP30IBKHYQOUItX2s2SN8"
+                    class="cv-button mg-lt" target="_blank">
+                    <i class='bx bxs-download'></i>
+                </a>
+
+                <a title="Send Mail" class="cv-button mg-rt">
+                    <i class='bx bx-mail-send'></i>
+                </a>
+            <!-- </div> -->
+
         </nav>
     </div>
 
@@ -54,12 +59,17 @@
 
             <p>Scroll Down <i class='bx bx-chevrons-down'></i></p>
         </div>
-        <img src="profile.jpg" alt="" id="myphoto">
+        <div class="img-over">
+            <img src='profile.jpg' alt="" id="myphoto">
+            <!-- <img src="cutoutorange.png" alt="" id="myphoto-orng">
+            <img src="cutoutdot.png" alt="" id="myphoto-dot"> -->
+        </div>
 
     </section>
 
     <!-- about-me -->
     <section class="about-me" id="aboutmep">
+
         <div class="left-abtme reveal2">
             <p>About Me</p>
             <p>I am a fresher who is graduated in 2023. I have skills in HTML, CSS, Javascript, React.js and i am
@@ -111,7 +121,7 @@
 
     <!-- skill section -->
     <section class="third-page" id="threep">
-        <p class="title">Skills</p>
+        <p class="title sk-gold">Skills</p>
 
         <div class="skill-flex">
             <div class="skill-list">
@@ -146,12 +156,19 @@
             <div class="skboss">
                 <div class="skill-info">
                     <div class="skill-info-boss">
-                        <p id="hdng-skill">Heading</p>
+                        <div class="cross-div">
+                            <p id="hdng-skill">Heading</p>
+                            <div class="cross"><i class='bx bx-x'></i></div>
+
+                        </div>
                         <p id="cnt-skill">Content</p>
 
                     </div>
                     <p id="skl-skill">Skill set</p>
-                    <p id="prct-skill">Percentage<span><p>%</p></span></p>
+                    <div class="prct-all">
+                        <p id="prct-skill">Percentage</p>
+                        <p id="prct-sign">%</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -198,6 +215,7 @@
 
             </ul>
         </div>
+        <div class="modal"></div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="script.js"></script>
